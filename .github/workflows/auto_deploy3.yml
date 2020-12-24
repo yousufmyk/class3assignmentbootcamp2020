@@ -29,10 +29,12 @@ jobs:
         with: 
           node-version: 12
         
+          # Yarn command
+          cmd:  install
+      - name: Yarn build
+        run: yarn build
+      - name: Install surge
+        run: npm install -g surge
 
-      # Runs a set of commands using the runners shell
-      - name: Installing Surge
-        run: npm install --global surge
-        
       -  name: Deploying using Surge
          run: surge ./ assignment3yousuf.surge.sh --token ${{ secret.ASSIGNMENT3_TOKEN }}
