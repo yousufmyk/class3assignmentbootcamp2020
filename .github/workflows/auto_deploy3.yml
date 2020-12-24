@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: bootcamp_assignment3
+name: Bootcamp 2020 assignment three
 
 # Controls when the action will run. 
 on:
@@ -35,4 +35,4 @@ jobs:
         run: npm install --global surge
         
       -  name: Deploying using Surge
-         run: surge ./ assignment3yousuf.surge.sh --token ${{ ASSIGNMENT3_TOKEN }}
+         run: surge ./ assignment3yousuf.surge.sh/ --token ${{ secret.ASSIGNMENT3_TOKEN }}
